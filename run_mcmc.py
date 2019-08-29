@@ -40,6 +40,8 @@ steps = 100
 step = 0
 curr_likelihood = likelihood_dist.pdf(pos)
 
+print("STEP:\t" + str(step) + "\t" + str(pos[0]) + "\t" + str(pos[1]) + "\t" + str(curr_likelihood))
+
 while step < steps:
 
     prop_pos = pos + proposal_dist.rvs()
@@ -56,9 +58,10 @@ while step < steps:
         pos = prop_pos
         curr_likelihood = prop_likelihood
 
+    step += 1
+
     print("STEP:\t" + str(step) + "\t" + str(pos[0]) + "\t" + str(pos[1]) + "\t" + str(curr_likelihood))
 
-    step += 1
 
 
 
