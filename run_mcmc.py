@@ -1,5 +1,5 @@
-import os
-import math, sys
+# import os
+# import math, sys
 import numpy as np
 import random
 
@@ -18,13 +18,7 @@ prop_cov = 0.1 * np.matrix([[1., 0.5],
                  [0.5, 1.]])
 proposal_dist = multivariate_normal(mean=prop_mean, cov=prop_cov)
 
-
-# x = np.array([0, 0])
-
-#print(multivariate_normal.pdf(x, mean=mean, cov=1))
-
-
-#for x in np.arange(-3, 3, 0.1):
+# for x in np.arange(-3, 3, 0.1):
 #    for y in np.arange(-3, 3, 0.1):
 #        pos = np.array([x, y])
 #        # pdf = multivariate_normal.pdf(pos, mean=mean, cov=cov)
